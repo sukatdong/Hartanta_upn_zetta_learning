@@ -1,0 +1,56 @@
+body
+{
+    background-image: url("../Pelatihan/laptop/bg.jfif");
+    color: yellow;
+}
+h1
+{
+    text-align: center;
+    color: yellow;
+}
+p::first-line
+{
+    font-size: larger;
+    font-weight: bold;
+}
+img
+{
+    height: 220px;
+    width: 200px;
+}
+.card
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.card > div
+{
+    background-color: rgba(132, 122, 242, 0.317);
+    text-align: center;
+    border: solid;
+    margin-left: 70px;
+    margin-right: 70px;
+    transition: 0.4s;
+}
+.card > div:hover
+{
+    transform: scale(1.1); 
+}
+
+
+div,
+div:nth-child(-n+3)
+{
+    margin-top: 0;
+}
+div:nth-child(n+4)
+{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+div:nth-child(n+7)
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
