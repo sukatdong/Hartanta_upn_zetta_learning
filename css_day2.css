@@ -1,13 +1,14 @@
 body
 {
     text-align: center;
+    align-items: center;
     color: rgb(255, 251, 0);
     background-image:url("../Pelatihan/badminton/bg.webp");
     position: absolute;
 }
 
 img
-{ opacity: 1;
+{ 
     height: 250px;
     width: 200px;
 }
