@@ -5,8 +5,14 @@ body
 }
 h1
 {
+    top: 0;
     text-align: center;
-    color: yellow;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 242, 0, 0.648);
+    padding: 10px;
+    margin: 10px;
+    position:sticky;
+    
 }
 p::first-line
 {
@@ -26,11 +32,10 @@ img
 
 .card > div
 {
-    background-color: rgba(132, 122, 242, 0.317);
+    background-color: rgba(6, 6, 6, 0.317);
     text-align: center;
     border: solid;
-    margin-left: 70px;
-    margin-right: 70px;
+   margin: 50px;
     transition: 0.4s;
 }
 .card > div:hover
@@ -42,15 +47,32 @@ img
 div,
 div:nth-child(-n+3)
 {
-    margin-top: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
+
 div:nth-child(n+4)
 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 div:nth-child(n+7)
 {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
+}
+div:nth-child(n+10)
+{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+div:nth-child(n+13)
+{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+div:nth-child(n+16)
+{
+    margin-top: 0;
+    margin-bottom: 2;
 }
