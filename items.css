@@ -1,22 +1,35 @@
-.container
-{
+body{
+
+    background-image: url("../Pelatihan/laptop/bg.jfif");
+}
+div
+{   
+    margin: 3rem;
+    margin-top: 7rem;
     display: grid;
-    grid-template-columns: auto auto;
-    text-align: center;
+    grid-template-columns: auto auto ;
+    
 }
 ul
 {
     text-align: left;
 }
 h1
-{
+{   
+    padding: 10px;
+    background-color: rgba(209, 234, 234, 0.646);
+    position: sticky;
+    top: 0;
     text-align: center;
 }
 
-.container > div
+.container
 {
-    background-color: aqua;
-    margin : 2rem;
+    
+    padding: 1rem;
+    background-color: rgba(209, 234, 234, 0.646);
+    margin : 1rem;
     overflow: scroll;
     height: 50%;
+ 
 }
