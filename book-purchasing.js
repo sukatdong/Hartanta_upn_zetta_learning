@@ -42,7 +42,7 @@ function priceCalc(book, disc, tax, stock, purchase)
     
     return result; 
 }
-priceCalc({title : 'Tukang bubur Naik Mobil', price : 5000, printing_status : true} , 50, 10, 20, 10);
+priceCalc({title : 'Tukang bubur Naik Mobil', price : 5000, printing_status : true} , 40, 10, 21, 8);
 priceCalc({title : 'Atta Halilintar ', price : 20000, printing_status : true} , 20, 5, 5, 2);
 priceCalc({title : 'Kamu mau ngga jomblo ?', price : 52000, printing_status : true} , 15, 2, 7, 3);
 priceCalc({title : 'Bukan Begall !! ', price : 59000, printing_status : true} , 25, 10, 10, 5);
