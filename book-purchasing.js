@@ -58,8 +58,8 @@ function priceCalc(book, disc, tax, stock, purchase, credit)
 }
         let temp =
         priceCalc({title : 'Tukang bubur Naik Mobil', price : 5000, printing_status : true} , 40, 5, 1, 7,4);
-        priceCalc({title : 'Atta Halilintar ', price : 20000, printing_status : true} , 20, 5, 5, 2, 7);
+        priceCalc({title : 'Halilintar ', price : 20000, printing_status : true} , 20, 5, 5, 2, 7);
         priceCalc({title : 'Kamu mau ngga jomblo ?', price : 52000, printing_status : true} , 15, 2, 7, 3, 3);
         priceCalc({title : 'Bukan Begall !! ', price : 59000, printing_status : true} , 25, 10, 10, 5, 6);
         priceCalc({title : 'Bedah Rumah  ', price : 99000, printing_status : true} , 70, 10, 5, 2, 8);
-        priceCalc({title : 'Merah Jambu', price : 115000, printing_status : true} , 80, 10, 6, 5, 1);
+        priceCalc({title : 'Merah Jambu', price : 115000, printing_status : true} , 80, 10, 6, 5, 3);
