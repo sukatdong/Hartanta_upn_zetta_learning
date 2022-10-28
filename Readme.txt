@@ -18,4 +18,4 @@ Html menjadi ouput/tampilannya sedangkan typescript dan SCSS merupakan isi dari 
 
 2. Component akan dikelompokkan sesuai dengan modulnya, contohnya untuk musik akan menampilkan komponen musik. 
 
-3. Projek angular memuat modul yang diisi oleh file html jadi dari HTML tersebut kita bisa melihat bentukan dari projeknya 
+3. Projek angular memuat modul yang diisi oleh file html jadi dari HTML tersebut kita bisa melihat bentukan projeknya  
