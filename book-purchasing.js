@@ -2,7 +2,7 @@ function priceCalc(book, disc, tax, stock, purchase)
 {
 
     let result = 0;
-    let price1, disc1, pricedisc1, amounttax1, pricetax1;
+    let price1, amountdisc1, pricedisc1, amounttax1, pricetax1;
     for(let i = 0; i < purchase; i++)
     {
             if(book && book.price && (i < stock)) 
