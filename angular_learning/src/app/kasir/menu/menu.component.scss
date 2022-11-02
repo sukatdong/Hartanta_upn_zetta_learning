@@ -1,0 +1,28 @@
+ul{
+    text-align: center;
+    list-style-type:none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid;
+    
+}
+
+li{
+    width: 250px;
+    height: 100px;
+    border: 2px solid;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+li:hover{
+    background-color: rgba(249, 249, 249, 0.7);
+    scale: 1.1;
+    
+}
