@@ -1,6 +1,5 @@
-import { Component, OnInit ,  AfterContentChecked} from '@angular/core';
-import { map, Observable, pipe } from 'rxjs';
-import { KasirService, Selecteditem } from '../kasir.service';
+import { Component, OnInit , Output, EventEmitter, Input, SimpleChange, OnChanges, SimpleChanges, AfterContentChecked} from '@angular/core';
+import { Selecteditem } from '../kasir-big/kasir-big.component';
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
@@ -8,32 +7,33 @@ import { KasirService, Selecteditem } from '../kasir.service';
 })
 export class PaymentComponent implements OnInit, AfterContentChecked {
 
-  public items : Observable<Selecteditem[]>
-  public total : Observable<number>
+  @Input() items!: Selecteditem[];
+  @Output () itemChanges : EventEmitter<Selecteditem[]> = new EventEmitter <Selecteditem[]>;
 
-  constructor(private kasirService : KasirService) { 
-    console.log("tes")
-    this.items = this.kasirService.selectedItems$
-    this.total = this.kasirService.selectedItems$.pipe(
-    map((items) => items.reduce((total, item) => total += item.amount * item.Harga , 0))
-    )
-    
-  }
+  public total :number = 0;
+
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  
-
-  ngAfterContentChecked() {
-    this.total = this.kasirService.selectedItems$.pipe(
-      map((items) => items.reduce((total, item) => total += item.amount * item.Harga , 0))
-    )
+  ngAfterContentChecked(): void {
+    console.log("tes")
+    this.total = this.items.reduce((total, item) => total += item.amount * item.Harga , 0)
   }
 
-removeitem(item :Selecteditem){
-  this.kasirService.removeItem(item)
-}
- 
+  removeItem(itemToBeRemoved:Selecteditem){
+    const itemIndex = this.items.findIndex(({id}) => id ===itemToBeRemoved.id)
+    const itemRef = this.items[itemIndex]
+    if(this.items[itemIndex].amount>1){
+      this.items[itemIndex].amount-=1
+    }
+    else{
+      this.items.splice(itemIndex,1);
+    }
+   
+    
+  
+  }
 
 }
