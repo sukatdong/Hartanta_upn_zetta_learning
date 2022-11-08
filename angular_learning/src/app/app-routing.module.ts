@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'kasir-big',
+    path:'',
     pathMatch:'full',
     loadChildren:()=>import('./kasir/kasir.module').then(mod=>mod.KasirModule),
   }
