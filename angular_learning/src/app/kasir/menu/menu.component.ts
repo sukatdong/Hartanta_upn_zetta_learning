@@ -1,33 +1,27 @@
-import { Component, OnInit, Input, EventEmitter, Output,AfterViewInit,ViewChild, ElementRef } from '@angular/core';
-import { item } from '../kasir-big/kasir-big.component';
-
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { item, KasirService } from '../kasir.service';
+export interface items {id : number , name : string , Harga : number}
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
-  styles:['[bgaq]{  background-color: aquamarine;}',
-  '[coba]{background: red; color: white}'
-]
 
 })
 export class MenuComponent implements OnInit {
 
-  @Input('items') items: item[]=[]
-  @Output ('itemAdded') onAddItem : EventEmitter<item> = new EventEmitter<item>()
-  @ViewChild('bgaq') bgaq?:ElementRef;
-  @ViewChild('al') bgRed?:ElementRef;
-  constructor() { }
+  public items : Observable<item[]>
+
+  constructor(private kasirService: KasirService) {
+    this.items = this.kasirService.items$
+   }
 
   ngOnInit(): void {
-  }
-  addItem(item :item) : void{
-    this.onAddItem.emit(item)
-  }
-  ngAfterViewInit(){
-
-    this.bgaq?.nativeElement.setAttribute('bgaq', '');
-    this.bgRed?.nativeElement.setAttribute('coba', '');
+  
    
   } 
 
+  addItem(item :item) : void{
+    this.kasirService.addItem(item);
+  }
 }
