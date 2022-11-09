@@ -1,9 +1,37 @@
 h1{
-    background-color: rgba(114, 121, 121, 0.63);
+   
     padding: 20px;
     text-align: center;
     font-size: 25px;
  margin-top: 0px;
  margin-bottom: 0px;
+ 
+
 }
    
+.btn{
+
+    text-align: center;
+    
+}
+
+button{
+    display: inline-block;
+    background-color: rgb(247, 247, 247);
+    width: 240px;
+    height: 50px;
+    border-radius: 5px;
+    border: thin solid #888;
+    white-space: nowrap;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin: 2rem 0;
+    margin-left: 150px;
+    margin-right: 150px;
+    border: none;
+}
+
+
+body{
+    background-color: rgba(114, 121, 121, 0.63);
+}

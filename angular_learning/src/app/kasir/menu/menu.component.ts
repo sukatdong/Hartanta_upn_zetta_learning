@@ -10,10 +10,10 @@ export interface items {id : number , name : string , Harga : number}
 })
 export class MenuComponent implements OnInit {
 
-  public items : Observable<item[]>
+  public items1 : Observable<item[]>
 
   constructor(private kasirService: KasirService) {
-    this.items = this.kasirService.items$
+    this.items1 = this.kasirService.items$
    }
 
   ngOnInit(): void {

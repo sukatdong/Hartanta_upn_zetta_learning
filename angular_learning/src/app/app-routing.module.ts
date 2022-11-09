@@ -3,10 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'kasir',
     pathMatch:'full',
     loadChildren:()=>import('./kasir/kasir.module').then(mod=>mod.KasirModule),
-  }
+  },
+  {
+    path :'employee',
+    loadChildren:()=>import('./employee/employee.module').then(m=> m.EmployeeModule),
+  
+  },
 ];
 
 @NgModule({
