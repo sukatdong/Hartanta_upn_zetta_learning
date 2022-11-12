@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Form, FormArray, FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { EditComponent } from '../edit/edit.component';
 import { UserManagerService } from '../user-manager.service';
+export interface List {id : string ,name : string ,email: string, age : number , gender : string , position :string, marital : string , addresgrup : addres[]} 
+export interface addres {addres :string , zip : string ,  city : string , country : string}
+
 
 interface pos {
   value: string;
@@ -14,8 +18,10 @@ interface pos {
   styleUrls: ['./create.component.scss']
 })
 export class CreateComponent implements OnInit {
-
+  private listid : string|null =null
+  public list : List|null = null
   public form : FormGroup 
+  
 
   constructor(private fb : FormBuilder ,private router : Router, private Service : UserManagerService ) { 
     
@@ -62,6 +68,17 @@ export class CreateComponent implements OnInit {
     this.Service.addUser(payload)
     this.router.navigate(['user-management','list'])
     
+    
+  }
+  add() {
+    (<FormArray>this.form.get('addresgrup')).push(new FormGroup({
+      addres: new FormControl(null , [Validators.required]),
+      zip: new FormControl(null ,[Validators.required,Validators.minLength(6),Validators.maxLength(9)]),
+      city: new FormControl(null ,[Validators.required]),
+      country: new FormControl(null ,[Validators.required])
+    }))
+
+   
     
   }
 }
