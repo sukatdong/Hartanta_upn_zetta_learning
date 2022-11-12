@@ -8,7 +8,7 @@
       
     </mat-toolbar>
   </p>
-  <mat-card class="example-card">
+  <mat-card class="example-card" (click)="Cekemail()">
     <button mat-raised-button color="primary" [routerLink]="['..','list']">Back</button>
       <mat-card-content class="atas">
           <form [formGroup]="form"  >
@@ -58,8 +58,9 @@
                       </mat-select>
                     </mat-form-field>
   
-                    <ul formArrayName = "addresgrup">
-                      <li *ngFor = "let group of addres.controls; let idx = index" [formGroupName]="idx">
+                    <ul formArrayName = "addresgrup" *ngFor = "let group of addres.controls; let idx = index">
+                      <li  [formGroupName]="idx">
+                  
                           <mat-form-field  class="example-full-width">
                               <mat-label>Addres</mat-label>
                               <input type="text" matInput formControlName="addres">
@@ -84,7 +85,7 @@
       
     </mat-card>
     <div class="butt">
-        <button mat-raised-button   [routerLink]="['..','list' ]" (click)="submit()" class="sbm">Submit</button>
+        <button mat-raised-button (click)="submit()" class="sbm">Submit</button>
   
     </div>
   
